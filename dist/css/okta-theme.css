@@ -1,6 +1,6 @@
 #okta-sign-in.auth-container.main-container {
   /* -- Fonts and Text Colors -- */
-  font-family: "montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   color: #777;
 }
 
@@ -45,7 +45,7 @@
 #okta-sign-in.auth-container input[type="submit"],
 #okta-sign-in.auth-container input[type="button"] {
   /* -- Submit Buttons' Fonts -- */
-  font-family: "montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
 
 #okta-sign-in.auth-container.main-container {
@@ -1103,5 +1103,16 @@
     max-width: 316px;
     margin: 0 auto;
   }
+}
+
+#okta-sign-in .auth-header {
+    padding: 30px 90px 75px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    z-index: 10;
+    -moz-transition: padding-bottom .4s;
+    -webkit-transition: padding-bottom .4s;
+    transition: padding-bottom .4s;
+    display: none!mportant;
 }
 /*# sourceMappingURL=okta-theme.css.map */
