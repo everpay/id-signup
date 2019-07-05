@@ -17479,6 +17479,38 @@ button:focus {
   color: #24292e;
 }
 
+
+/* soft success */
+.btn.btn-soft-success {
+    color: #00c9a7;
+}
+
+.btn-soft-success {
+    color: #00c9a7;
+    background: rgba(0, 201, 167, 0.1);
+    border-color: transparent;
+}
+
+.btn-soft-success[href]:hover, .btn-soft-success[href]:focus, .btn-soft-success[href]:active, .btn-soft-success[href].active, .btn-soft-success[type]:hover, .btn-soft-success[type]:focus, .btn-soft-success[type]:active, .btn-soft-success[type].active {
+  color: #046958;
+  background: #f8fafd;
+  box-shadow: 0 4px 11px rgba(248, 250, 253, 0.35);
+}
+
+.btn-soft-success[href].disabled, .btn-soft-success[href]:disabled, .btn-soft-success[type].disabled, .btn-soft-success[type]:disabled {
+  color: #046958;
+  background-color: rgba(0, 201, 167, 0.32);
+  box-shadow: none;
+}
+
+.btn-soft-success[href]:not(:disabled):not(.disabled):active, .btn-soft-success[href]:not(:disabled):not(.disabled).active,
+.show > .btn-soft-success[href].dropdown-toggle, .btn-soft-success[type]:not(:disabled):not(.disabled):active, .btn-soft-success[type]:not(:disabled):not(.disabled).active,
+.show > .btn-soft-success[type].dropdown-toggle {
+  color: #046958;
+  background-color: rgba(0, 201, 167, 0.1);
+}
+
+
 /* gray air */
 .btn-soft-gray {
   color: #f8fafd;
