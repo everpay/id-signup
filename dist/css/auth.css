@@ -17510,6 +17510,9 @@ button:focus {
   background-color: rgba(0, 201, 167, 0.1);
 }
 
+.btn-circle {
+    border-radius: 10rem !important;
+}
 
 /* gray air */
 .btn-soft-gray {
