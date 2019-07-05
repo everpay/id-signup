@@ -51,8 +51,8 @@
 #okta-sign-in.auth-container.main-container {
   /* -- Main Background and Border Colors -- */
   background-color: #fff;
-  border-color: #ddd #ddd #d8d8d8;
-  box-shadow: 0 2px 0 rgba(175, 175, 175, 0.12);
+  border-color: #fff #fff #ffffff;
+  box-shadow: 0 0px 0 rgba(175, 175, 175, 0.12);
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -113,7 +113,7 @@
 
 #okta-sign-in.auth-container.main-container .o-form .o-form-input .o-form-control .input-icon-divider {
   border-right: 1px solid #bbb;
-  height: 38px;
+  height: 47px;
   position: absolute;
   right: 34px;
   top: 0;
@@ -126,6 +126,7 @@
 #okta-sign-in.auth-container .okta-sign-in-header {
   /* -- Main Background and Border Colors -- */
   border-bottom-color: #ddd;
+  display: none;
 }
 
 #okta-sign-in.auth-container .okta-sign-in-beacon-border {
@@ -1113,9 +1114,9 @@
     -moz-transition: padding-bottom .4s;
     -webkit-transition: padding-bottom .4s;
     transition: padding-bottom .4s;
-    display: none!mportant;
+    display: none!important;
 }
-}
+
 #okta-sign-in {
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -1134,14 +1135,13 @@
 }
 
 #okta-sign-in.auth-container .button-primary {
-    color: #00c9a7;
-    background-color:rgba(0, 201, 167, 0.1);
-    background: -o-linear-gradient(top, rgba(0, 201, 167, 0.1) 0%, #05a98d 100%);
-    background: -ms-linear-gradient(top, rgba(0, 201, 167, 0.1) 0%, #05a98d 100%);
-    background: -webkit-linear-gradient(rgba(0, 201, 167, 0.1), #05a98d);
-    background: linear-gradient(rgba(0, 201, 167, 0.1), #05a98d);
-    border-color: transparent;
-    border-bottom-color: #05a98d;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+    border-radius: 10rem!important;
 }
+#okta-sign-in .o-form .input-fix, #okta-sign-in .o-form .textarea-fix {
+    height: 47px!important;
+    border: 1px solid #bbb;
+    display: inline-block;
+    float: left;
+}
+
 /*# sourceMappingURL=okta-theme.css.map */
