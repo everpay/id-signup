@@ -1115,4 +1115,33 @@
     transition: padding-bottom .4s;
     display: none!mportant;
 }
+}
+#okta-sign-in {
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    background-color: #ffffff;
+    position: relative;
+    overflow: auto;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    height: auto;
+    margin: 2px!important;
+    width: 400px;
+    min-width: 300px;
+}
+
+#okta-sign-in.auth-container .button-primary {
+    color: #00c9a7;
+    background-color:rgba(0, 201, 167, 0.1);
+    background: -o-linear-gradient(top, rgba(0, 201, 167, 0.1) 0%, #05a98d 100%);
+    background: -ms-linear-gradient(top, rgba(0, 201, 167, 0.1) 0%, #05a98d 100%);
+    background: -webkit-linear-gradient(rgba(0, 201, 167, 0.1), #05a98d);
+    background: linear-gradient(rgba(0, 201, 167, 0.1), #05a98d);
+    border-color: transparent;
+    border-bottom-color: #05a98d;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+}
 /*# sourceMappingURL=okta-theme.css.map */
