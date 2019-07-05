@@ -8,99 +8,226 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>HTML5 Validation with VueJs</title>
+    <title>Login to Everpay</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="dist/css/form-validation.css" rel="stylesheet">
-</head>
+    <!-- Google Fonts -->
+    <link href="dist/css/css" rel="stylesheet">
 
-<body class="bg-light">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="dist/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="dist/css/animate.min.css">
+    <link rel="stylesheet" href="dist/css/slick.css">
 
-    <div class="container" id="app">
-        <div class="py-5 text-center">
-            <h2>HTML5 Validation with Vuejs</h2>
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="dist/css/auth.css">
+  </head>
+  <body data-gr-c-s-loaded="true">
+
+
+    <div id="app">
+      <header id="header" class="u-header u-header--bg-transparent u-header--abs-top">
+        <div class="u-header__section">
+          <div id="logoAndNav" class="container-fluid">
+
+            <nav class="navbar navbar-expand u-header__navbar">
+
+              <a class="d-none d-lg-flex navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white" href="https://htmlstream.com/preview/front-v2.4.0/html/home/index.html" aria-label="Front">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46px" height="46px" viewBox="0 0 46 46" xml:space="preserve" style="margin-bottom: 0;">
+                  <path fill="#E1E4EA" opacity=".65" d="M23,41.1L23,41.1c-9.9,0-18-8-18-18l0,0c0-9.9,8-18,18-18h11.3c3.7,0,6.6,3,6.6,6.6v11.4C41,33,32.9,41.1,23,41.1z"></path>
+                  <path class="fill-white" opacity=".5" d="M28,36L28,36c-9.9,0-18-8-18-18l0,0c0-9.9,8-18,18-18h11.3C43,0.1,46,3.1,46,6.7v11.4C46,28,38,36,28,36z"></path>
+                  <path class="fill-white" opacity=".7" d="M18,46.1L18,46.1c-10,0-18-8-18-18l0,0c0-9.9,8-18,18-18h11.3c3.7,0,6.6,3,6.6,6.6v11.4C35.9,38.1,27.9,46.1,18,46.1z"></path>
+                  <path class="fill-primary" d="M17.4,34.1V18.4h10.2v2.9h-6.4v3.4H26v2.9h-4.8v6.5H17.4z"></path>
+                </svg>
+                <span class="u-header__navbar-brand-text">Everpay</span>
+              </a>
+
+              <a class="d-flex d-lg-none navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-collapsed" href="https://htmlstream.com/preview/front-v2.4.0/html/pages/index.html" aria-label="Front">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46px" height="46px" viewBox="0 0 46 46" xml:space="preserve" style="margin-bottom: 0;">
+                  <path fill="#3F7DE0" opacity=".65" d="M23,41L23,41c-9.9,0-18-8-18-18v0c0-9.9,8-18,18-18h11.3C38,5,41,8,41,11.7V23C41,32.9,32.9,41,23,41z"></path>
+                  <path class="fill-info" opacity=".5" d="M28,35.9L28,35.9c-9.9,0-18-8-18-18v0c0-9.9,8-18,18-18l11.3,0C43,0,46,3,46,6.6V18C46,27.9,38,35.9,28,35.9z"></path>
+                  <path class="fill-primary" opacity=".7" d="M18,46L18,46C8,46,0,38,0,28v0c0-9.9,8-18,18-18h11.3c3.7,0,6.6,3,6.6,6.6V28C35.9,38,27.9,46,18,46z"></path>
+                  <path class="fill-white" d="M17.4,34V18.3h10.2v2.9h-6.4v3.4h4.8v2.9h-4.8V34H17.4z"></path>
+                </svg>
+                <span class="d-inline-block u-header__navbar-brand-text">Everpay</span>
+              </a>
+
+
+              <div class="ml-auto">
+                <a class="btn btn-sm btn-primary transition-3d-hover" href="#" target="_blank">
+                  Get Started
+                </a>
+              </div>
+
+            </nav>
+
+          </div>
         </div>
+      </header>
 
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <form class="needs-validation" id="validated-form">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="firstName">First name</label>
-                            <input type="text" class="form-control" name="firstName" placeholder="" value="" required>
-                            <span class="text-danger" v-if="validationErrors.firstName" v-text="validationErrors.firstName"></span>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="lastName">Last name</label>
-                            <input type="text" class="form-control" name="lastName" placeholder="" value="" required>
-                            <span class="text-danger" v-if="validationErrors.lastName" v-text="validationErrors.lastName"></span>
-                        </div>
-                    </div>
+      <main id="content" role="main">
 
-                    <div class="mb-3">
-                        <label for="username">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">@</span>
-                            </div>
-                            <input type="text" class="form-control" name="username" placeholder="Username" required>
-                            <span class="text-danger" v-if="validationErrors.username" style="width: 100%;" v-text="validationErrors.username"></span>
-                        </div>
-                    </div>
+        <div class="d-flex align-items-center position-relative height-lg-100vh">
+          <div class="col-lg-5 col-xl-4 d-none d-lg-flex align-items-center gradient-half-primary-v1 height-lg-100vh px-0">
+            <div class="w-100 p-5">
 
-                    <div class="mb-3">
-                        <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                        <input type="email" class="form-control" name="email" placeholder="you@example.com">
-                        <div class="text-danger" v-if="validationErrors.email" style="width: 100%;">
-                            <span v-text="validationErrors.email"></span>
-                        </div>
-                    </div>
+                <figure class="text-center mb-5 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+                  <path class="fill-white" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
+                    C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3
+                    c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8
+                    C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z"></path>
+                </svg>
+              </figure>
 
-                    <div class="mb-3">
-                        <label for="address">Address</label>
-                        <input type="text" class="form-control" name="address" placeholder="1234 Main St" required>
-                        <span class="text-danger" v-if="validationErrors.address" style="width: 100%;" v-text="validationErrors.address"></span>
-                    </div>
+              <div id="testimonialsNavMain" class="js-slick-carousel u-slick mb-4 slick-initialized slick-slider" data-infinite="true" data-autoplay="true" data-speed="5000" data-fade="true" data-nav-for="#testimonialsNavPagination">
+                <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1263px;">
+                  <div class="js-slide slick-slide" data-slick-index="0" aria-hidden="true" style="width: 421px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; height: auto; transition: opacity 500ms ease 0s;" tabindex="0">
+                  <div class="w-md-80 w-lg-60 text-center mx-auto">
+                    <blockquote class="h5 text-white font-weight-normal mb-4">The template is really nice and offers quite a large set of options. Thank you!</blockquote>
+                    <h1 class="h6 text-white-70">Maria Muszynska, Google</h1>
+                  </div>
 
-                    <div class="row">
-                        <div class="col-md-5 mb-3">
-                            <label for="country">Country</label>
-                            <select class="custom-select d-block w-100" name="country" required>
-                                <option value="">Choose...</option>
-                                <option>Nigeria</option>
-                            </select>
-                            <span class="text-danger" v-if="validationErrors.country" style="width: 100%;" v-text="validationErrors.country"></span>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <label for="state">State</label>
-                            <select class="custom-select d-block w-100" name="state" required>
-                                <option value="">Choose...</option>
-                                <option>Lagos</option>
-                            </select>
-                            <span class="text-danger" v-if="validationErrors.state" style="width: 100%;" v-text="validationErrors.state"></span>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="zip">Zip</label>
-                            <input type="text" class="form-control" name="zip" placeholder="" pattern="[0-9]{7}" title="Enter a valid Nigerian zip code" required>
-                            <span class="text-danger" v-if="validationErrors.zip" style="width: 100%;" v-text="validationErrors.zip"></span>
-                        </div>
-                    </div>
+                </div>
+                <div class="js-slide slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 421px; position: relative; left: -421px; top: 0px; z-index: 1000; opacity: 1; height: auto; transition: opacity 500ms ease 0s;" tabindex="-1">
+                  <div class="w-md-80 w-lg-60 text-center mx-auto">
+                    <blockquote class="h5 text-white font-weight-normal mb-4">It's beautiful and the coding is done quickly and seamlessly. Keep it up!</blockquote>
+                    <h2 class="h6 text-white-70">James Austin, Slack</h2>
+                  </div>
+                </div>
 
-                    <button class="btn btn-primary btn-lg btn-block" type="submit"
-                        @click.prevent="submitForm()">SUBMIT</button>
-                </form>
+                <div class="js-slide slick-slide" data-slick-index="2" aria-hidden="true" style="width: 421px; position: relative; left: -842px; top: 0px; z-index: 998; opacity: 0; height: auto; transition: opacity 500ms ease 0s;" tabindex="-1">
+                  <div class="w-md-80 w-lg-60 text-center mx-auto">
+                    <blockquote class="h5 text-white font-weight-normal mb-4">I love Front! I love the ease of use, I love the fact that I have total creative freedom...</blockquote>
+                    <h3 class="h6 text-white-70">Charlotte Moore, Amazon</h3>
+                  </div>
+                </div>
+
+              </div>
+              </div>
+
+              </div>
+
+              <div id="testimonialsNavPagination" class="js-slick-carousel u-slick u-slick--transform-off u-slick--pagination-modern mx-auto slick-initialized slick-slider slick-transform-off" data-infinite="true" data-autoplay="true" data-speed="5000" data-center-mode="true" data-slides-show="3" data-is-thumbs="true" data-focus-on-select="true" data-nav-for="#testimonialsNavMain">
+                <div class="slick-list draggable" style="padding: 0px;"><div class="slick-track" style="opacity: 1; width: 201px; transform: translate3d(-67px, 0px, 0px); transition: transform 500ms ease 0s;"><div class="js-slide slick-slide slick-active" data-slick-index="0" aria-hidden="false" style="width: 67px; height: auto;" tabindex="0">
+                  <div class="u-avatar mx-auto">
+                    <img class="img-fluid rounded-circle" src="dist/img/img1.jpg" alt="">
+                  </div>
+                </div><div class="js-slide slick-slide slick-current slick-active slick-center" data-slick-index="1" aria-hidden="false" style="width: 67px; height: auto;" tabindex="0">
+                  <div class="u-avatar mx-auto">
+                    <img class="img-fluid rounded-circle" src="dist/img/img3.jpg" alt="">
+                  </div>
+                </div><div class="js-slide slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 67px; height: auto;" tabindex="0">
+                  <div class="u-avatar mx-auto">
+                    <img class="img-fluid rounded-circle" src="dist/img/img2.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              </div>
+
+
+
+
+              </div>
+              <!-- End Testimonials Carousel Pagination -->
+
+              <!-- Clients -->
+              <div class="position-absolute right-0 bottom-0 left-0 text-center p-5">
+                <h4 class="h6 text-white-70 mb-3">Integrations</h4>
+                <div class="d-flex justify-content-center">
+                  <div class="mx-4">
+                    <img class="u-clients" src="dist/img/slack-white.svg" alt="">
+                  </div>
+                  <div class="mx-4">
+                    <img class="u-clients" src="dist/img/google-white.svg" alt="">
+                  </div>
+                  <div class="mx-4">
+                    <img class="u-clients" src="dist/img/spotify-white.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <!-- End Clients -->
             </div>
+          </div>
+
+          <div class="container">
+            <div class="row no-gutters">
+              <div class="col-md-8 col-lg-7 col-xl-6 offset-md-2 offset-lg-2 offset-xl-3 space-3 space-lg-0">
+
+                <form class="js-validate mt-5 needs-validation" id="validated-form">
+
+                  <div class="mb-7">
+                    <h2 class="h3 text-primary font-weight-normal mb-0">Welcome <span class="font-weight-semi-bold">back</span></h2>
+                    <p>Login to manage your account.</p>
+                  </div>
+
+
+                  <div class="js-form-message form-group">
+                    <label class="form-label" for="signinSrEmail">Email address</label>
+                    <input type="email" class="form-control" name="email" id="signinSrEmail" placeholder="Email address" aria-label="Email address" required="" data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success">
+                    <div class="text-danger" v-if="validationErrors.email" style="width: 100%;">
+                        <span v-text="validationErrors.email"></span>
+                      </div>
+                  </div>
+
+                  <div class="js-form-message form-group">
+                    <label class="form-label" for="signinSrPassword">
+                      <span class="d-flex justify-content-between align-items-center">
+                        Password
+                        <a class="link-muted text-capitalize font-weight-normal" href="recover-account.html">Forgot Password?</a>
+                      </span>
+                    </label>
+                    <input type="password" class="form-control" name="password" id="signinSrPassword" placeholder="********" aria-label="********" required="" data-msg="Your password is invalid. Please try again." data-error-class="u-has-error" data-success-class="u-has-success">
+                  </div>
+
+                  <div class="row align-items-center mb-5">
+                    <div class="col-6">
+                      <span class="small text-muted">Don't have an account?</span>
+                      <a class="small" href="signup.html">Signup</a>
+                    </div>
+
+                    <div class="col-6 text-right">
+                      <button type="submit" @click.prevent="submitForm()" class="btn btn-primary transition-3d-hover">Get Started</button>
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- End Form -->
+      </main>
+
 
         <footer class="my-5 pt-5 text-muted text-center text-small">
-
+Copyright 2019 Everpay
         </footer>
     </div>
     <script src="dist/js/vue.min.js"></script>
     <script src="dist/js/form-validation.js"></script>
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/jquery-migrate.min.js"></script>
+    <script src="dist/js/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/jquery.validate.min.js"></script>
+    <script src="dist/js/slick.js"></script>
+    <script src="dist/js/hs.core.js"></script>
+    <script src="dist/js//hs.validation.js"></script>
+    <script src="dist/js/hs.slick-carousel.js"></script>
+    <script src="dist/js/"></script>
+    
+    <script>
+      $(document).on('ready', function () {
+        // initialization of slick carousel
+        $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
+        // initialization of form validation
+        $.HSCore.components.HSValidation.init('.js-validate');
+      });
+    </script>
+
 </body>
 
 </html>
