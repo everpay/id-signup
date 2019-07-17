@@ -177,10 +177,10 @@
 
 <script type="text/javascript">
   var oktaSignIn = new OktaSignIn({
-    baseUrl: "https://everpayinc.okta.com",
+    baseUrl: "https://everpayinc.okta.com/implicit/callback",
     clientId: "0oau9003wK2yHoNgC356",
     authParams: {
-      issuer: "https://www.everpayinc.com",
+      issuer: "https://everpayinc.okta.com/oauth2/default",
       responseType: ['token', 'id_token'],
       display: 'page'
     }
