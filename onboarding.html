@@ -61,12 +61,9 @@ sessionStorage.fonts = true;
 
       <main id="content" role="main">
 
-
-<div class="row d-flex align-items-center position-relative height-lg-100vh mt-5">
-
-<div class="col-lg-3 col-xl-3 d-none d-lg-flex align-items-center height-lg-100vh px-0 mt-5"></div>
-		
-<div class="col-lg-9 col-xl-9 d-none d-lg-flex align-items-center height-lg-100vh px-0 mt-5">
+ <div class="container">
+<div class="d-flex align-items-center position-relative height-lg-100vh mt-5">
+<div class="col-lg-12 col-xl-12 d-none d-lg-flex align-items-center height-lg-100vh px-0 mt-5">
 <div class="w-100 p-5 mt-5 ml-3">
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid align-items-center">
 <div class="kt-wizard-v4" id="kt_wizard_v4" data-ktwizard-state="step-first">
@@ -529,8 +526,37 @@ sessionStorage.fonts = true;
 							</div>
 						</div>
 						<!--end: Form Wizard Step 3-->
+						
+						
 
 						<!--begin: Form Wizard Step 4-->
+						<div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+							<div class="kt-heading kt-heading--md">Enter your Banking information</div>
+							<div class="kt-form__section kt-form__section--first">
+								<div class="kt-wizard-v4__form">
+									<div class="row">
+										<div class="col-xl-6">
+											<div class="form-group">
+												<label>Routing number</label>
+												<input type="text" class="form-control" name="bankrouting" placeholder="12345678" value="010000000">
+												<span class="form-text text-muted">Please enter routing number.</span>
+											</div>
+										</div>
+										<div class="col-xl-6">
+											<div class="form-group">
+												<label>Account Number</label>
+												<input type="text" class="form-control" name="bankaccount" placeholder="12345678" value="123456789">
+												<span class="form-text text-muted">Please enter your account number</span>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!--end: Form Wizard Step 4-->
+
+						<!--begin: Form Wizard Step 5-->
 						<div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
 							<div class="kt-heading kt-heading--md">Review your Details and Submit</div>
 							<div class="kt-form__section kt-form__section--first">
@@ -568,7 +594,7 @@ sessionStorage.fonts = true;
 								</div>
 							</div>
 						</div>
-						<!--end: Form Wizard Step 4-->
+						<!--end: Form Wizard Step 5-->
 
 						<!--begin: Form Actions -->					
 						<div class="kt-form__actions">
@@ -589,7 +615,7 @@ sessionStorage.fonts = true;
 											</div>
 										</div>
 									</div>
-
+</div>
 								</main>
 						
 						<!-- end:: Content -->
