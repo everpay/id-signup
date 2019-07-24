@@ -1,1 +1,146 @@
-"use strict";var KTWizard4=function(){var e,r,t;return{init:function(){var i;KTUtil.get("kt_wizard_v4"),e=$("#kt_form"),(t=new KTWizard("kt_wizard_v4",{startStep:1})).on("beforeNext",function(e){!0!==r.form()&&e.stop()}),t.on("beforePrev",function(e){!0!==r.form()&&e.stop()}),t.on("change",function(e){KTUtil.scrollTop()}),r=e.validate({ignore:":hidden",rules:{fname:{required:!0},lname:{required:!0},phone:{required:!0},emaul:{required:!0,email:!0},address1:{required:!0},postcode:{required:!0},city:{required:!0},state:{required:!0},country:{required:!0},ccname:{required:!0},ccnumber:{required:!0,creditcard:!0},ccmonth:{required:!0},ccyear:{required:!0},cccvv:{required:!0,minlength:2,maxlength:3}},invalidHandler:function(e,r){KTUtil.scrollTop(),swal.fire({title:"",text:"There are some errors in your submission. Please correct them.",type:"error",confirmButtonClass:"btn btn-secondary"})},submitHandler:function(e){}}),(i=e.find('[data-ktwizard-type="action-submit"]')).on("click",function(t){t.preventDefault(),r.form()&&(KTApp.progress(i),e.ajaxSubmit({success:function(){KTApp.unprogress(i),swal.fire({title:"",text:"The application has been successfully submitted!",type:"success",confirmButtonClass:"btn btn-secondary"})}}))})}}}();jQuery(document).ready(function(){KTWizard4.init()});
+
+
+    //--------------------------------------------------------------------------
+    //  DreamFactory 2.0 instance specific constants
+    //--------------------------------------------------------------------------
+
+    var INSTANCE_URL   = 'https://api.everpayinc.com/';
+    var APP_API_KEY     = '5685b5ac1ff7be382dae4a5b3aac3795e590646e8b884142be7f2dcee1a12ee5';
+
+
+
+    //--------------------------------------------------------------------------
+    //  Initializing app by selecting login page
+    //--------------------------------------------------------------------------
+
+    $('div[id^="template_"]').hide();
+    $('#template_index').show();
+
+    $.route('index');
+
+
+
+    //--------------------------------------------------------------------------
+    //  Login
+    //--------------------------------------------------------------------------
+
+    var loginHandle = function(response) {
+
+        if(response.hasOwnProperty('session_token')) {
+            setToken('token', response.session_token);
+            $.route('groups');
+        }
+        else {
+            var msgObj = {};
+            msgObj = parseResponse(response);
+            if(msgObj) {
+                messageBox(msgObj.code, msgObj.message, msgObj.error);
+            }
+        }
+    };
+
+    $('#signin').on('click', function () {
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        $.api.login(email, password, loginHandle);
+    });
+
+    $('#register').on('click', function () {
+        $.route('register');
+    });
+
+
+
+    //--------------------------------------------------------------------------
+    //  Register
+    //--------------------------------------------------------------------------
+
+    $('#register_user').on('click', function () {
+        var firstname = $('#register_firstname').val();
+        var lastname = $('#register_lastname').val();
+        var email = $('#register_email').val();
+        var password = $('#register_password').val();
+
+        $.api.register(firstname, lastname, email, password, function(response) {
+            if(response.hasOwnProperty('session_token')) {
+                setToken('token', response.session_token);
+                $.route('groups');
+            }
+            else {
+                var msgObj = {};
+                msgObj = parseResponse(response);
+                if(msgObj) {
+                    messageBox(msgObj.code, msgObj.message, msgObj.error);
+                }
+            }
+        });
+    });
+
+    $('#register_cancel').on('click', function () {
+        $.route('index');
+    });
+
+
+
+    //--------------------------------------------------------------------------
+    //  Misc functions
+    //--------------------------------------------------------------------------
+
+    function setToken(key, value) {
+        sessionStorage.setItem(key, value);
+    }
+
+    function getToken(key) {
+        return sessionStorage.getItem(key);
+    }
+
+    function removeToken(key) {
+
+        $.api.logout(function(data) {
+            if(data.success) {
+                sessionStorage.removeItem(key);
+                $.route('index');
+            }
+            else {
+                var response = parseResponse(data);
+                messageBox(response.code, response.message, response.error);
+            }
+        });
+    }
+
+    function clearForm() {
+        $('input').each(function(){
+            $(this).val('');
+        });
+    }
+
+    function messageBox(title, body, error) {
+        $('#modal_title').html(title);
+        $('#modal_body').html(body);
+        $('#errorMsg').html(error);
+        $('#messageBox').modal('show');
+    }
+
+    function parseResponse(response) {
+        var responseObj = jQuery.parseJSON( response.responseText );
+
+        if (responseObj.hasOwnProperty('error')) {
+            if(responseObj.error.context !== null) {
+                var errMsg = '';
+
+                $.each(responseObj.error.context, function(data){
+                    errMsg += '<br> - ' + responseObj.error.context[data][0].replace(/&quot;/g, '\"');
+                });
+
+                var message = responseObj.error.message + '<br>' + errMsg;
+                return {code: responseObj.error.code, message: message, error: JSON.stringify(response)};
+            }
+            else {
+                return {code: responseObj.error.code, message: responseObj.error.message.replace(/&quot;/g, '\"'), error: JSON.stringify(response)};
+            }
+        }
+        else {
+            return false;
+        }
+    }
