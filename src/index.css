@@ -1,0 +1,551 @@
+body{
+    margin: 0;
+    font-family: "SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    box-sizing: border-box;
+}
+body *{
+    font-size: 14px;
+}
+.container{
+    max-width: 748px;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+.signUpForm {
+    padding: 20px 0;
+}
+.textAlign{
+    text-align: center;
+}
+.customSubHeading{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.signUpBody {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 30px 0;
+    margin: 30px 0;
+}
+.row{
+    margin: 0 -10px;
+}
+.col-6 {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    width: calc(50% - 20px);
+    flex: 0 0 calc(50% - 20px);
+}
+.col-3{
+    padding: 0 10px;
+    width: calc(33.33% - 20px);
+    flex: 0 0 calc(33.33% - 20px);
+}
+.col-12 {
+    padding: 0 10px;
+    max-width: 100%;
+    flex: auto;
+}
+.everGreenInput, .flag-select, .customSelect select{
+    background: transparent !important;
+    width: 100%;
+    box-shadow: none !important;
+    outline: none !important;
+    line-height: 18px;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+    transition: color 300ms,border-color 300ms,background-color 300ms;
+}
+.everGreenInput:focus{
+    box-shadow: none;
+    border-color: #2996cc;
+}
+.flag-select{
+    height: 38px;
+    padding: 0;
+}
+.flag-select__option__icon {
+    width: 30px;
+    height: 20px;
+    top: 5px;
+    left: -5px;
+}
+.flag-select__btn {
+    padding: 0px 5px;
+    width: 100%;
+    text-align: left;
+    height: 38px;
+    cursor: pointer;
+}
+.flag-select__option.has-label {
+    padding: 3px 20px 9px 13px;
+}
+.flag-select__option__label {
+    font-size: 12px;
+    color: #5f6a7d;
+}
+.flag-select__btn:focus{
+    outline: none;
+}
+.flag-select__option__label {
+    padding-left: 5px;
+}
+.flag-select__btn:after, .flag-select__btn[aria-expanded="true"]:after {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+.flag-select__options {
+    width: 100%;
+    margin-top: 0;
+    top: 101%;
+    padding: 0;
+    border-radius: 0 0 3px 3px;
+    left: -1px;
+}
+.flag-select__option.has-label {
+    padding: 3px 20px 9px 13px;
+    margin: 0;
+}
+.flag-select__options {
+    width: 100%;
+    margin-top: 0;
+    top: 101%;
+}
+.disclaimer,.disclaimer a {
+    color: #5f6a7d;
+    font-size: 11px;
+    line-height: 20px;
+}
+.disclaimer a{
+    color:#2996cc !important;
+    text-decoration: none;
+    transition: color 150ms linear;
+    font-weight: 600;
+}
+.disclaimer a{
+    color: #2586b7;
+}
+.customCheckBox {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    margin-top: 15px;
+    padding-top: 30px;
+}
+.customCheckBox > label {
+    margin: 0;
+}
+.customCheckBox > label > input + div{
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #c4c4c4;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.customCheckBox > label > input[checked] + div > svg{
+    color: #fff;
+}
+.customCheckBox > label > input:focus + div,
+.customCheckBox > label > input:hover + div{
+    border-color: #2996cc;
+    box-shadow: none !important;
+    background: #fff !important;
+}
+
+.customCheckBox > label > input[checked] + div,
+.customCheckBox > label >  input[checked]:focus + div,
+.customCheckBox > label >  input[checked]:hover + div{
+    background: #2996cc !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+
+.flag-select__option:not(.flag-select__option--placeholder):hover, .flag-select__option:not(.flag-select__option--placeholder):focus {
+    background: #2996cc;
+}
+
+.flag-select__option:not(.flag-select__option--placeholder):hover .flag-select__option__label,
+.flag-select__option:not(.flag-select__option--placeholder):focus .flag-select__option__label{
+    color: #fff;
+}
+.btnMain {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100%;
+    box-shadow: none;
+    outline: none;
+    line-height: 18px;
+    border: 0;
+    border-radius: 3px;
+    transition: 300ms all;
+    background: #2996cc;
+}
+
+.btnMain:hover, .btnMain:focus{
+    background:#2586b7 !important;
+    color: #fff;
+    box-shadow: none !important;
+}
+.signIn{
+    font-weight: 600;
+    color:#2996cc;
+    text-decoration: none;
+}
+.signBox img{
+    margin: 0 auto;
+    display: block;
+}
+.radioGroup {
+    display: flex;
+    align-items: center;
+}
+.radioGroup img {
+    width: 40px;
+}
+.rGLeft {
+    padding-right: 30px;
+}
+.customInput input:checked, .customInput input:not(:checked) {
+    position: absolute;
+    opacity: 0;
+}
+.customInput {
+    position: relative;
+}
+.customInput input+ label{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid #c4c4c4;
+    display: block;
+    padding: 30px 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: 300ms all;
+}
+.customInput input:checked+ label{
+    border-color: #2996cc;
+    background: #daeaf2;
+}
+.customInput input:checked+ label span{
+    color: #2586b7;
+}
+.customInput {
+    margin-bottom: 20px;
+}
+
+.customInput.checkGroup input+ label {
+    padding: 10px 20px;
+}
+.checkGroup .rGLeft {
+    padding-right: 20px;
+}
+.customInput input+ label h4{
+    transition: 300ms all;
+}
+.customInput input:checked+ label h4{
+    color: #2996cc;
+}
+.customSelect:after {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    transform: rotate(45deg);
+    pointer-events: none;
+    content: "";
+}
+.customSelect {
+    position: relative;
+}
+.customSelect svg{
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/* date time picker css */
+/*!
+ * https://github.com/YouCanBookMe/react-datetime
+ */
+
+.rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  width: 250px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+.rdtPicker td span.rdtOld {
+  color: #999999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+  cursor: default;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-child th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-child th:hover {
+  background: #eeeeee;
+}
+
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+
+.rdtCounters {
+  display: inline-block;
+}
+
+.rdtCounters > div {
+  float: left;
+}
+
+.rdtCounter {
+  height: 100px;
+}
+
+.rdtCounter {
+  width: 40px;
+}
+
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+
+.rdtTime td {
+  cursor: default;
+}
+
+/*end*/
+.error_span {
+  color: red;
+  padding-top: 8px;
+  display: block;
+}
+
+.is-invalid{
+  box-shadow: inset 0 0 0 1px #ec4c47, inset 0 1px 2px rgba(67, 90, 111, 0.14);
+}
+
+
+@media(max-width:767px){
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .col-6, .col-3, .col-12 {
+        margin-bottom: 10px;
+        width: calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px);
+    }
+    .signUpBody {
+        padding: 20px 0;
+        margin: 20px 0;
+    }
+}
+
+.text-center.text-danger {
+  text-align: center;
+  color: red;
+  background: #ff00001f;
+  margin: 15px -6px;
+  padding: 10px;
+}
