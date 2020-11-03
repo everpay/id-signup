@@ -1,0 +1,29 @@
+"use strict";
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MergeLinksIcon = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Icon = _interopRequireDefault(require("../src/Icon"));
+
+var svgPaths16 = ['M8 7c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm0 4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm0-8c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm6 3c-.93 0-1.71.64-1.93 1.5H11V3c0-1.66-1.34-3-3-3S5 1.34 5 3v4.5H3.93C3.71 6.64 2.93 6 2 6 .9 6 0 6.9 0 8s.9 2 2 2c.93 0 1.71-.64 1.93-1.5H5V13c0 1.66 1.34 3 3 3s3-1.34 3-3V8.5h1.07c.22.86 1 1.5 1.93 1.5 1.1 0 2-.9 2-2s-.9-2-2-2zm-4 7c0 1.1-.9 2-2 2s-2-.9-2-2V3c0-1.1.9-2 2-2s2 .9 2 2v10z'];
+var svgPaths20 = ['M10 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm8-5c-.93 0-1.71.64-1.93 1.5H14V4c0-2.21-1.79-4-4-4S6 1.79 6 4v5.5H3.93C3.71 8.64 2.93 8 2 8c-1.1 0-2 .9-2 2s.9 2 2 2c.93 0 1.71-.64 1.93-1.5H6V16c0 2.21 1.79 4 4 4s4-1.79 4-4v-5.5h2.07c.22.86 1 1.5 1.93 1.5 1.1 0 2-.9 2-2s-.9-2-2-2zm-5 8c0 1.66-1.34 3-3 3s-3-1.34-3-3V4c0-1.66 1.34-3 3-3s3 1.34 3 3v12zM10 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z'];
+var MergeLinksIcon = (0, _react.memo)((0, _react.forwardRef)(function (props, ref) {
+  return _react["default"].createElement(_Icon["default"], (0, _extends2["default"])({
+    svgPaths16: svgPaths16,
+    svgPaths20: svgPaths20,
+    ref: ref,
+    name: "merge-links"
+  }, props));
+}));
+exports.MergeLinksIcon = MergeLinksIcon;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9pY29ucy9nZW5lcmF0ZWQvTWVyZ2VMaW5rc0ljb24uanMiXSwibmFtZXMiOlsic3ZnUGF0aHMxNiIsInN2Z1BhdGhzMjAiLCJNZXJnZUxpbmtzSWNvbiIsInByb3BzIiwicmVmIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBQUE7O0FBQ0E7O0FBRUEsSUFBTUEsVUFBVSxHQUFHLENBQ2pCLGdjQURpQixDQUFuQjtBQUdBLElBQU1DLFVBQVUsR0FBRyxDQUNqQixvWkFEaUIsQ0FBbkI7QUFJTyxJQUFNQyxjQUFjLEdBQUcsaUJBQzVCLHVCQUFXLFVBQUNDLEtBQUQsRUFBUUMsR0FBUjtBQUFBLFNBQ1QsZ0NBQUMsZ0JBQUQ7QUFDRSxJQUFBLFVBQVUsRUFBRUosVUFEZDtBQUVFLElBQUEsVUFBVSxFQUFFQyxVQUZkO0FBR0UsSUFBQSxHQUFHLEVBQUVHLEdBSFA7QUFJRSxJQUFBLElBQUksRUFBQztBQUpQLEtBS01ELEtBTE4sRUFEUztBQUFBLENBQVgsQ0FENEIsQ0FBdkIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgbWVtbywgZm9yd2FyZFJlZiB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IEljb24gZnJvbSAnLi4vc3JjL0ljb24nXG5cbmNvbnN0IHN2Z1BhdGhzMTYgPSBbXG4gICdNOCA3Yy0uNTUgMC0xIC40NS0xIDFzLjQ1IDEgMSAxIDEtLjQ1IDEtMS0uNDUtMS0xLTF6bTAgNGMtLjU1IDAtMSAuNDUtMSAxcy40NSAxIDEgMSAxLS40NSAxLTEtLjQ1LTEtMS0xem0wLThjLS41NSAwLTEgLjQ1LTEgMXMuNDUgMSAxIDEgMS0uNDUgMS0xLS40NS0xLTEtMXptNiAzYy0uOTMgMC0xLjcxLjY0LTEuOTMgMS41SDExVjNjMC0xLjY2LTEuMzQtMy0zLTNTNSAxLjM0IDUgM3Y0LjVIMy45M0MzLjcxIDYuNjQgMi45MyA2IDIgNiAuOSA2IDAgNi45IDAgOHMuOSAyIDIgMmMuOTMgMCAxLjcxLS42NCAxLjkzLTEuNUg1VjEzYzAgMS42NiAxLjM0IDMgMyAzczMtMS4zNCAzLTNWOC41aDEuMDdjLjIyLjg2IDEgMS41IDEuOTMgMS41IDEuMSAwIDItLjkgMi0ycy0uOS0yLTItMnptLTQgN2MwIDEuMS0uOSAyLTIgMnMtMi0uOS0yLTJWM2MwLTEuMS45LTIgMi0yczIgLjkgMiAydjEweidcbl1cbmNvbnN0IHN2Z1BhdGhzMjAgPSBbXG4gICdNMTAgMTNjLTEuMSAwLTIgLjktMiAycy45IDIgMiAyIDItLjkgMi0yLS45LTItMi0yem04LTVjLS45MyAwLTEuNzEuNjQtMS45MyAxLjVIMTRWNGMwLTIuMjEtMS43OS00LTQtNFM2IDEuNzkgNiA0djUuNUgzLjkzQzMuNzEgOC42NCAyLjkzIDggMiA4Yy0xLjEgMC0yIC45LTIgMnMuOSAyIDIgMmMuOTMgMCAxLjcxLS42NCAxLjkzLTEuNUg2VjE2YzAgMi4yMSAxLjc5IDQgNCA0czQtMS43OSA0LTR2LTUuNWgyLjA3Yy4yMi44NiAxIDEuNSAxLjkzIDEuNSAxLjEgMCAyLS45IDItMnMtLjktMi0yLTJ6bS01IDhjMCAxLjY2LTEuMzQgMy0zIDNzLTMtMS4zNC0zLTNWNGMwLTEuNjYgMS4zNC0zIDMtM3MzIDEuMzQgMyAzdjEyek0xMCAzYy0xLjEgMC0yIC45LTIgMnMuOSAyIDIgMiAyLS45IDItMi0uOS0yLTItMnonXG5dXG5cbmV4cG9ydCBjb25zdCBNZXJnZUxpbmtzSWNvbiA9IG1lbW8oXG4gIGZvcndhcmRSZWYoKHByb3BzLCByZWYpID0+IChcbiAgICA8SWNvblxuICAgICAgc3ZnUGF0aHMxNj17c3ZnUGF0aHMxNn1cbiAgICAgIHN2Z1BhdGhzMjA9e3N2Z1BhdGhzMjB9XG4gICAgICByZWY9e3JlZn1cbiAgICAgIG5hbWU9XCJtZXJnZS1saW5rc1wiXG4gICAgICB7Li4ucHJvcHN9XG4gICAgLz5cbiAgKSlcbilcbiJdfQ==

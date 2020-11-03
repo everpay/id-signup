@@ -1,0 +1,29 @@
+"use strict";
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ExchangeIcon = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Icon = _interopRequireDefault(require("../src/Icon"));
+
+var svgPaths16 = ['M1.99 5.99c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.89-2-2-2zm4.15 1.86a.495.495 0 10.7-.7L5.7 5.99h5.79c.28 0 .5-.22.5-.5s-.22-.5-.5-.5H5.7l1.15-1.15a.495.495 0 10-.7-.7l-2 2c-.1.09-.16.21-.16.35s.06.26.15.35l2 2.01zm7.85-1.86c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.89-2-2-2zM9.85 8.14a.533.533 0 00-.36-.15.495.495 0 00-.35.85l1.15 1.15h-5.8c-.28 0-.5.22-.5.5s.22.5.5.5h5.79l-1.15 1.15a.495.495 0 10.7.7l2-2c.09-.09.15-.22.15-.35s-.06-.26-.15-.35l-1.98-2z'];
+var svgPaths20 = ['M2.5 8a2.5 2.5 0 000 5 2.5 2.5 0 000-5zm10.35 3.15a.495.495 0 10-.7.7L13.3 13H5.5c-.28 0-.5.22-.5.5s.22.5.5.5h7.79l-1.15 1.15c-.08.09-.14.21-.14.35a.495.495 0 00.85.35l2-2c.09-.09.15-.21.15-.35s-.06-.26-.15-.35l-2-2zM17.5 8a2.5 2.5 0 000 5 2.5 2.5 0 000-5zM7.15 9.85a.495.495 0 10.7-.7L6.71 8h7.79c.28 0 .5-.22.5-.5s-.22-.5-.5-.5H6.71l1.15-1.15c.08-.09.14-.21.14-.35a.495.495 0 00-.85-.35l-2 2c-.09.09-.15.21-.15.35s.06.26.15.35l2 2z'];
+var ExchangeIcon = (0, _react.memo)((0, _react.forwardRef)(function (props, ref) {
+  return _react["default"].createElement(_Icon["default"], (0, _extends2["default"])({
+    svgPaths16: svgPaths16,
+    svgPaths20: svgPaths20,
+    ref: ref,
+    name: "exchange"
+  }, props));
+}));
+exports.ExchangeIcon = ExchangeIcon;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9pY29ucy9nZW5lcmF0ZWQvRXhjaGFuZ2VJY29uLmpzIl0sIm5hbWVzIjpbInN2Z1BhdGhzMTYiLCJzdmdQYXRoczIwIiwiRXhjaGFuZ2VJY29uIiwicHJvcHMiLCJyZWYiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFFQSxJQUFNQSxVQUFVLEdBQUcsQ0FDakIsaWNBRGlCLENBQW5CO0FBR0EsSUFBTUMsVUFBVSxHQUFHLENBQ2pCLG1iQURpQixDQUFuQjtBQUlPLElBQU1DLFlBQVksR0FBRyxpQkFDMUIsdUJBQVcsVUFBQ0MsS0FBRCxFQUFRQyxHQUFSO0FBQUEsU0FDVCxnQ0FBQyxnQkFBRDtBQUNFLElBQUEsVUFBVSxFQUFFSixVQURkO0FBRUUsSUFBQSxVQUFVLEVBQUVDLFVBRmQ7QUFHRSxJQUFBLEdBQUcsRUFBRUcsR0FIUDtBQUlFLElBQUEsSUFBSSxFQUFDO0FBSlAsS0FLTUQsS0FMTixFQURTO0FBQUEsQ0FBWCxDQUQwQixDQUFyQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBtZW1vLCBmb3J3YXJkUmVmIH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgSWNvbiBmcm9tICcuLi9zcmMvSWNvbidcblxuY29uc3Qgc3ZnUGF0aHMxNiA9IFtcbiAgJ00xLjk5IDUuOTljLTEuMSAwLTIgLjktMiAycy45IDIgMiAyIDItLjkgMi0yLS44OS0yLTItMnptNC4xNSAxLjg2YS40OTUuNDk1IDAgMTAuNy0uN0w1LjcgNS45OWg1Ljc5Yy4yOCAwIC41LS4yMi41LS41cy0uMjItLjUtLjUtLjVINS43bDEuMTUtMS4xNWEuNDk1LjQ5NSAwIDEwLS43LS43bC0yIDJjLS4xLjA5LS4xNi4yMS0uMTYuMzVzLjA2LjI2LjE1LjM1bDIgMi4wMXptNy44NS0xLjg2Yy0xLjEgMC0yIC45LTIgMnMuOSAyIDIgMiAyLS45IDItMi0uODktMi0yLTJ6TTkuODUgOC4xNGEuNTMzLjUzMyAwIDAwLS4zNi0uMTUuNDk1LjQ5NSAwIDAwLS4zNS44NWwxLjE1IDEuMTVoLTUuOGMtLjI4IDAtLjUuMjItLjUuNXMuMjIuNS41LjVoNS43OWwtMS4xNSAxLjE1YS40OTUuNDk1IDAgMTAuNy43bDItMmMuMDktLjA5LjE1LS4yMi4xNS0uMzVzLS4wNi0uMjYtLjE1LS4zNWwtMS45OC0yeidcbl1cbmNvbnN0IHN2Z1BhdGhzMjAgPSBbXG4gICdNMi41IDhhMi41IDIuNSAwIDAwMCA1IDIuNSAyLjUgMCAwMDAtNXptMTAuMzUgMy4xNWEuNDk1LjQ5NSAwIDEwLS43LjdMMTMuMyAxM0g1LjVjLS4yOCAwLS41LjIyLS41LjVzLjIyLjUuNS41aDcuNzlsLTEuMTUgMS4xNWMtLjA4LjA5LS4xNC4yMS0uMTQuMzVhLjQ5NS40OTUgMCAwMC44NS4zNWwyLTJjLjA5LS4wOS4xNS0uMjEuMTUtLjM1cy0uMDYtLjI2LS4xNS0uMzVsLTItMnpNMTcuNSA4YTIuNSAyLjUgMCAwMDAgNSAyLjUgMi41IDAgMDAwLTV6TTcuMTUgOS44NWEuNDk1LjQ5NSAwIDEwLjctLjdMNi43MSA4aDcuNzljLjI4IDAgLjUtLjIyLjUtLjVzLS4yMi0uNS0uNS0uNUg2LjcxbDEuMTUtMS4xNWMuMDgtLjA5LjE0LS4yMS4xNC0uMzVhLjQ5NS40OTUgMCAwMC0uODUtLjM1bC0yIDJjLS4wOS4wOS0uMTUuMjEtLjE1LjM1cy4wNi4yNi4xNS4zNWwyIDJ6J1xuXVxuXG5leHBvcnQgY29uc3QgRXhjaGFuZ2VJY29uID0gbWVtbyhcbiAgZm9yd2FyZFJlZigocHJvcHMsIHJlZikgPT4gKFxuICAgIDxJY29uXG4gICAgICBzdmdQYXRoczE2PXtzdmdQYXRoczE2fVxuICAgICAgc3ZnUGF0aHMyMD17c3ZnUGF0aHMyMH1cbiAgICAgIHJlZj17cmVmfVxuICAgICAgbmFtZT1cImV4Y2hhbmdlXCJcbiAgICAgIHsuLi5wcm9wc31cbiAgICAvPlxuICApKVxuKVxuIl19
